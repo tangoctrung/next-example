@@ -4,10 +4,20 @@ import "./globals.css";
 
 const ubuntu = Ubuntu({ subsets: ["greek"], weight: ["300", "400", "500", "700"] });
 
-export const metadata: Metadata = {
-  title: "Creator by trungtn | Web mua ban",
-  description: "Đây là trang web được tạo bởi trungtn, có tên là web trungtn",
-};
+export const metadata: Metadata  = {
+  metadataBase: new URL(`https://trungtn.vercel.app`),
+  title: {
+    default: 'Sfind | Trang web lưu trữ file',
+    template: `%s - Next.js Sfind`
+  },
+  description: 'Một ứng dụng web chuyên về lưu trữ file, tin nhắn với tên sfind, được xây dựng bằng nextjs, deploy lên vercel.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png'
+  }
+}
+
 
 export default function RootLayout({
   children,
