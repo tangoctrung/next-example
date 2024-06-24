@@ -1,9 +1,18 @@
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Trang chủ | Web mua bán by trungtn",
-  description: "Đây là trang chủ của web mua bán được tạo bởi trungtn, trong trang web này tập hợp tất cả dữ liệu public có trong dữ liệu của trungtn",
-};
+export const metadata: Metadata  = {
+  metadataBase: new URL(`https://trungtn.vercel.app`),
+  title: {
+    default: 'Sfind | Trang web lưu trữ file',
+    template: `%s - Next.js Sfind`
+  },
+  description: 'Một ứng dụng web chuyên về lưu trữ file, tin nhắn với tên sfind, được xây dựng bằng nextjs, deploy lên vercel.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png'
+  }
+}
 
 export default function Home() {
 
